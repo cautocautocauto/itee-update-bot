@@ -22,8 +22,8 @@ class MonitorTests(unittest.TestCase):
 
     def test_diff_only_reports_changed_lines(self):
         result = change_excerpt("a\nb", "a\nc")
-        self.assertIn("-b", result)
-        self.assertIn("+c", result)
+        self.assertIn("Rimosso:\nb", result)
+        self.assertIn("Aggiunto:\nc", result)
 
 
 if __name__ == "__main__":

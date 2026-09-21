@@ -3,7 +3,7 @@ name: Controllo aggiornamenti ITEE
 on:
   workflow_dispatch:
   schedule:
-    - cron: "7,37 * * * *"
+    - cron: "7,22,37,52 * * * *"
 
 permissions:
   contents: read
@@ -42,7 +42,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           HTTP_TIMEOUT_SECONDS: "30"
-        run: python bot.py --once
+        run: python bot.py
 
       - name: Salva il nuovo stato delle pagine
         if: success()
