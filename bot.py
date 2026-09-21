@@ -155,6 +155,9 @@ def main() -> int:
         raise RuntimeError("TELEGRAM_BOT_TOKEN non configurato")
     if not chat_id:
         raise RuntimeError("TELEGRAM_CHAT_ID non configurato")
+    if os.getenv("SEND_TEST_NOTIFICATION", "").lower() == "true":
+        send_telegram(token, chat_id, "Test ITEE Update — notifiche attive.", timeout)
+        return 0
     return run_check(token, chat_id, STATE_FILE, timeout)
 
 
