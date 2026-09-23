@@ -4,6 +4,8 @@ Controlla ogni 15 minuti:
 
 - la sezione News della homepage ITEE;
 - il contenuto della pagina Ammissione, compresi testi e link.
+- la sezione Scorrimento graduatorie della pagina Unina dedicata al 42° ciclo;
+- la sezione Modalità d'iscrizione della stessa pagina Unina.
 
 Quando rileva una modifica invia su Telegram le parti aggiunte o rimosse e il collegamento alla pagina.
 

@@ -16,6 +16,7 @@ from bs4 import BeautifulSoup, Tag
 
 HOME_URL = "https://itee.dieti.unina.it/index.php/it/"
 ADMISSION_URL = "https://itee.dieti.unina.it/index.php/it/ammissione/ammissione"
+UNINA_42_URL = "https://www.unina.it/it/didattica/post-laurea/dottorati/42esimo-ciclo"
 STATE_FILE = Path(__file__).with_name("state.json")
 USER_AGENT = "ITEE-change-monitor/1.0 (personal Telegram notifier)"
 
@@ -31,6 +32,8 @@ class Watch:
 WATCHES = (
     Watch("home_news", "Novità ITEE", HOME_URL, (".sp-module.news-cycle .sp-module-content", ".news-cycle", ".sp-module-content")),
     Watch("admission", "Pagina Ammissione", ADMISSION_URL, ("article.item-page", "#sp-component")),
+    Watch("unina_rankings", "Scorrimento graduatorie Unina", UNINA_42_URL, ("#sezione-3",)),
+    Watch("unina_enrollment", "Modalità d'iscrizione Unina", UNINA_42_URL, ("#sezione-4",)),
 )
 
 

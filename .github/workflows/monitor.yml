@@ -35,6 +35,9 @@ jobs:
       - name: Installa le dipendenze
         run: pip install -r requirements.txt
 
+      - name: Verifica i parser
+        run: python -m unittest -q
+
       - name: Recupera l'ultimo stato delle pagine
         uses: actions/cache/restore@v5
         with:
